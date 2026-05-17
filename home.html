@@ -94,11 +94,10 @@
       </div>
     </section>
 
-    <section id="cashout" class="w-11/12 mx-auto py-5">
-        <h2 class="text-xl font-bold mb-5">Cashout</h2>
-        <div
-        class="card bg-base-100 w-full   shadow  rounded-2xl"
-      >
+    <!-- Cash Out -->
+    <section id="cashout" class="hidden w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-5">Cashout</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
             <!-- Agent Number -->
@@ -108,7 +107,6 @@
               type="tel"
               maxlength="11"
               minlength="11"
-              
               class="input rounded-full w-full bg-base-200"
               placeholder="Enter 11 digit number"
             />
@@ -119,11 +117,10 @@
             <input
               id="cashout-amount"
               type="number"
-              
               class="input rounded-full w-full bg-base-200"
               placeholder="Enter amount to withdraw"
             />
-            <br>
+            <br />
             <label class="label text-neutral font-bold">4 Digit Pin</label>
             <input
               id="cashout-pin"
@@ -143,6 +140,62 @@
         </div>
       </div>
     </section>
+
+    <!-- Add Money -->
+    <section id="add-money" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-5">Add Money</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <!-- Agent Number -->
+            <label class="label text-neutral font-bold">Select Bank</label>
+            <select id="add-money-bank" class="select w-full rounded-full bg-base-200">
+              <option disabled selected>Select a Bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="IBBL">IBBL</option>
+              <option value="CITY">City Bank</option>
+            </select>
+            <br>
+            <label class="label text-neutral font-bold">Bank Account Number</label>
+            <input
+              id="add-money-number"
+              type="tel"
+              maxlength="11"
+              minlength="11"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Enter 11 digit account number"
+            />
+            <br />
+
+            <!-- Cashout Amount -->
+            <label class="label text-neutral font-bold">Amount to Add</label>
+            <input
+              id="add-money-amount"
+              type="number"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Add amount to withdraw"
+            />
+            <br />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="add-money-pin"
+              type="password"
+              inputmode="numeric"
+              maxlength="4"
+              minlength="4"
+              pattern="[0-9]"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Enter 4 Digit Pin"
+            />
+
+            <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <script src="script/cashout.js"></script>
     <script src="script/machine.js"></script>
   </body>
