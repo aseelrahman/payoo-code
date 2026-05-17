@@ -12,3 +12,14 @@ function setBalance(value){
     const balanceEl = document.getElementById("balance");
     balanceEl.innerText = value;
 }
+
+function showOnly(id){
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+
+    addMoney.classList.add("hidden");
+    cashout.classList.add("hidden");
+ 
+    document.getElementById(id).classList.remove("hidden")
+
+}
