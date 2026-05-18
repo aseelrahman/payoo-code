@@ -16,9 +16,11 @@ function setBalance(value){
 function showOnly(id){
     const addMoney = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
+    const transactions = document.getElementById("history");
 
     addMoney.classList.add("hidden");
     cashout.classList.add("hidden");
+    transactions.classList.add("hidden")
  
     document.getElementById(id).classList.remove("hidden")
 
