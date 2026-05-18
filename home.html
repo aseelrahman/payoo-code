@@ -67,19 +67,31 @@
       </p>
 
       <div class="buttons grid grid-cols-3 gap-3">
-        <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('add-money')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="assets/opt-1.png" alt="" />
           <p>Add Money</p>
         </button>
-        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('cashout')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="assets/opt-2.png" alt="" />
           <p>Cashout</p>
         </button>
-        <button onclick="showOnly('sendMoney')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('sendMoney')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="assets/opt-3.png" alt="" />
           <p>Send Money</p>
         </button>
-        <button onclick="showOnly('getBonus')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('getBonus')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="assets/opt-4.png" alt="" />
           <p>Get Bonus</p>
         </button>
@@ -87,14 +99,17 @@
           <img src="assets/opt-5.png" alt="" />
           <p>Pay Bill</p>
         </button>
-        <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('history')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="assets/opt-6.png" alt="" />
           <p>Transactions</p>
         </button>
       </div>
     </section>
 
-        <!-- Add Money -->
+    <!-- Add Money -->
     <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-5">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -102,14 +117,19 @@
           <fieldset class="fieldset">
             <!-- Agent Number -->
             <label class="label text-neutral font-bold">Select Bank</label>
-            <select id="add-money-bank" class="select w-full rounded-full bg-base-200">
+            <select
+              id="add-money-bank"
+              class="select w-full rounded-full bg-base-200"
+            >
               <option disabled selected>Select a Bank</option>
               <option value="DBBL">DBBL</option>
               <option value="IBBL">IBBL</option>
               <option value="CITY">City Bank</option>
             </select>
-            <br>
-            <label class="label text-neutral font-bold">Bank Account Number</label>
+            <br />
+            <label class="label text-neutral font-bold"
+              >Bank Account Number</label
+            >
             <input
               id="add-money-number"
               type="tel"
@@ -141,7 +161,10 @@
               placeholder="Enter 4 Digit Pin"
             />
 
-            <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">
+            <button
+              id="add-money-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
               Add Money
             </button>
           </fieldset>
@@ -196,14 +219,16 @@
       </div>
     </section>
 
-        <!-- Send Money -->
-    <section id="sendMoney" class=" w-11/12 mx-auto py-5 hidden">
+    <!-- Send Money -->
+    <section id="sendMoney" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-5">Send Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
             <!-- Recipient Number -->
-            <label class="label text-neutral font-bold">User Account Number</label>
+            <label class="label text-neutral font-bold"
+              >User Account Number</label
+            >
             <input
               id="recipient-number"
               type="tel"
@@ -235,7 +260,10 @@
               placeholder="Enter 4 Digit Pin"
             />
 
-            <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full">
+            <button
+              id="send-money-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
               Send Now
             </button>
           </fieldset>
@@ -243,14 +271,16 @@
       </div>
     </section>
 
-        <!-- Get Bonus -->
-    <section id="getBonus" class="hidden w-11/12 mx-auto py-5 ">
+    <!-- Get Bonus -->
+    <section id="getBonus" class="hidden w-11/12 mx-auto py-5">
       <h2 class="text-xl font-bold mb-5">Get Bonus</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
             <!-- Coupon -->
-            <label class="label text-neutral font-bold">Enter Bonus Coupon</label>
+            <label class="label text-neutral font-bold"
+              >Enter Bonus Coupon</label
+            >
             <input
               id="coupon-number"
               type="text"
@@ -259,8 +289,11 @@
               class="input rounded-full w-full bg-base-200"
               placeholder="Enter your coupon"
             />
-           
-            <button id="get-bonus-btn" class="btn btn-primary mt-4 rounded-full">
+
+            <button
+              id="get-bonus-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
               Get Bonus
             </button>
           </fieldset>
@@ -268,11 +301,69 @@
       </div>
     </section>
 
+    <!-- Pay Bill -->
+    <section id="Pay Bill" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-5">Pay Bill</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <!-- Select Bank -->
+            <label class="label text-neutral font-bold">Select To Pay</label>
+            <select id="bank" class="select w-full rounded-full bg-base-200">
+              <option disabled selected>Select Bank</option>
+              <option value="UCB">UCB</option>
+              <option value="EBL">EBL</option>
+              <option value="JANATA">JANATA BANK</option>
+            </select>
+            <br />
+            <label class="label text-neutral font-bold"
+              >Bank Account Number</label
+            >
+            <input
+              id="bank-account-number"
+              type="tel"
+              maxlength="10"
+              minlength="10"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Enter 10 digit account number"
+            />
+            <br />
+
+            <!-- Bill Pay Amount -->
+            <label class="label text-neutral font-bold"
+              >Add Amount to Pay</label
+            >
+            <input
+              id="add-pay-amount"
+              type="number"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Add amount to withdraw"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input
+              id="bill-pay-pin"
+              type="password"
+              inputmode="numeric"
+              maxlength="4"
+              minlength="4"
+              pattern="[0-9]"
+              class="input rounded-full w-full bg-base-200"
+              placeholder="Enter 4 Digit Pin Number"
+            />
+
+            <button id="bill-pay-btn" class="btn btn-primary mt-4 rounded-full">
+              Pay Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transaction History -->
     <section id="history" class="hidden w-11/12 mx-auto py-5 space-y-5">
       <h2 class="text-xl font-bold mb-5">Transactions</h2>
-      <div id="history-container">
-
-      </div>
+      <div id="history-container"></div>
     </section>
 
     <script src="script/cashout.js"></script>
@@ -280,5 +371,6 @@
     <script src="script/addMoney.js"></script>
     <script src="script/sendMoney.js"></script>
     <script src="script/getBonus.js"></script>
+    <script src="script/payBill.js"></script>
   </body>
 </html>
